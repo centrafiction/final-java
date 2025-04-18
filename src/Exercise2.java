@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class Exercise2 {
     // The original heathrow.csv has the amount of rain in the 907th line empty justt to remind you for the future
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //user inputs
         boolean quit = false;
         WeatherDataIO.readCSV("Heathrow.csv");
         System.out.println("===== Weather Data Menu =====");
         while (!quit) {
-
+            //The menu
             System.out.println("1. Display All Weather Data");
             System.out.println("2. Search Weather Data by Year");
             System.out.println("3. Show Average Rainfall by Year");
@@ -18,8 +18,11 @@ public class Exercise2 {
             System.out.println("6. Calculate 3 Hottest Years");
             System.out.println("Exit Program by typing QUIT");
 
-            String page = scanner.nextLine();
-
+            String page = scanner.nextLine(); //user input
+            // essentially switch is used in replace if..elif..else as i would probably
+            // needs a lot for creating this menu and it allows me to know whih part is which
+            // without having to fight my own understanding of java syntax (such as having }else which works for some reason
+            // default is what is ran if none of the options are picked in the scanner user input
             switch (page) {
                 case "1":
                     ArrayList<WeatherData> list = WeatherDataIO.getAllWeatherData();

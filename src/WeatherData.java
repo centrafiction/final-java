@@ -1,4 +1,5 @@
 public class WeatherData {
+    // THIS IS A DECLARATION IT DECLARES THAT IT EXISTS ESSENTIALLY
     private int year;
     private int month;
     private float maxTemp;
@@ -7,6 +8,7 @@ public class WeatherData {
     private float meanTemp;
 
     public WeatherData(int year, int month, float maxTemp, float minTemp, float rainAmount){
+        // THIS IS THE CONSTRUCTOR DO NOT FORGET
         this.year = year;
         this.month = month;
         this.maxTemp = maxTemp;
@@ -38,6 +40,7 @@ public class WeatherData {
     public float getRainAmount() {
         return rainAmount;
     }
+    //This converts the data from the CSV file into a spaced readable format
     public String toCSV() {
         return year + "," + month + "," + maxTemp + "," + minTemp + "," + getMeanTemp() + "," + rainAmount;
     }
