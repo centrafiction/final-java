@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
+import java.util.*;
 
 public class WeatherDataIO {
     private static ArrayList<WeatherData> listWeather = new ArrayList<>();
@@ -49,5 +49,29 @@ public class WeatherDataIO {
 
     public static ArrayList<WeatherData> getAllWeatherData(){
         return listWeather;
+    }
+    public static void searchWeatherData(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a year between 1948 and 2024 to search for: ");
+
+        //This is the user input
+        int inputtedYear;
+        try {
+            inputtedYear = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid Year.");
+            return;
+        }
+
+        boolean found = false;
+
+        for (WeatherData items: listWeather)  {
+            if (items.getYear() == inputtedYear) {
+                System.out.printf("%-6d %-7d %-8.1f %-8.1f %-8.1f %-10.1f\n",
+                        items.getYear(), items.getMonth(), items.getMaxTemp(),
+                        items.getMinTemp(), items.getMeanTemp(), items.getRainAmount());
+                found = true;
+            }
+        }
     }
 }

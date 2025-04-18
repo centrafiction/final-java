@@ -38,4 +38,7 @@ public class WeatherData {
     public float getRainAmount() {
         return rainAmount;
     }
+    public String toCSV() {
+        return year + "," + month + "," + maxTemp + "," + minTemp + "," + getMeanTemp() + "," + rainAmount;
+    }
 }
