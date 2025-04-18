@@ -74,4 +74,11 @@ public class WeatherDataIO {
             }
         }
     }
+    public static void getAverageRainfallByYear(){}
+
+    public static void getAverageTemperatureByYear(){}
+
+    public static void get3Coldest(){}
+
+    public static void get3Hottest(){}
 }
