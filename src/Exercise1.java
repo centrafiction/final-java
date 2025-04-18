@@ -11,7 +11,7 @@ public class Exercise1 {
         for (int i = 0; i < shapes.length; i++){
             int shapeSize = rdn.nextInt(9) +2;
             boolean isSquare = rdn.nextBoolean();
-
+        //Randomly picks from the array whether it will be a square or triangle
             if (isSquare) {
                 shapes[i] = new Square(shapeSize);
                 System.out.println("Shape " + (i + 1) + ": Square (Size " + shapeSize + ")");
@@ -19,6 +19,7 @@ public class Exercise1 {
                 shapes[i] = new Triangle(shapeSize);
                 System.out.println("Shape " + (i + 1) + ": Triangle (Size " + shapeSize + ")");
             }
+            //draws shapes and a new line to separate
             shapes[i].draw();
             System.out.println();
         }
