@@ -9,7 +9,8 @@ public class Exercise3 {
         //lets the component class attributes be used in the frame
         window.setVisible(true);
         //has the window appear
-        OpenMeteoClient.updateCurrentWeather("London");
+        Thread.sleep(2000);
+        OpenMeteoClient.updateCurrentWeather("Dubai");
         System.out.println(OpenMeteoClient.getCurrentTemperature());
     }
 }
