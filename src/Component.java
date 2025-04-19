@@ -1,8 +1,13 @@
+import java.lang.Math;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
+
+
 public class Component extends JComponent implements MouseListener, KeyListener {
+    JButton button1;
+
     public Component() {
         // Reads Mouse and Keyboard inputs
         addMouseListener(this);
@@ -11,7 +16,25 @@ public class Component extends JComponent implements MouseListener, KeyListener 
         // Makes it so it reads the inputs while focused on the window
         setFocusable(true);
         requestFocusInWindow();
+/*
+        String[] times = OpenMeteoClient.getForecastTime();
+        String[] degrees = OpenMeteoClient.getForecastTemperature();
+        String[] rain = OpenMeteoClient.getForecastPrecipitation();
+
+        for (int i = 0; i < Math.min(times.length, degrees.length); i++) {
+            System.out.println(times[i] + " -> " + degrees[i] + "°C");
+        }*/
     }
+
+
+
+
+
+
+
+
+
+
 
 
     @Override
