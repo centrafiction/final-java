@@ -7,8 +7,8 @@ public class Exercise3 {
     public static void main(String[] args) throws Exception {
         MyFrame window = new MyFrame();
         //Thread.sleep(2000);
-        OpenMeteoClient.updateCurrentWeather("Paris");
-        OpenMeteoClient.updateForecast("Paris");
+        //OpenMeteoClient.updateCurrentWeather(x);
+        //OpenMeteoClient.updateForecast("Paris");
         //System.out.println(OpenMeteoClient.getCurrentPrecipitation());
         //System.out.println(Arrays.toString(OpenMeteoClient.getForecastTime()));
 
@@ -21,8 +21,10 @@ public class Exercise3 {
         System.out.println(myObj);
         */
 
-        for (int i = 0; i < Math.min(times.length, degrees.length); i++) {
+        /*for (int i = 0; i < Math.min(times.length, degrees.length); i++) {
             System.out.println(times[i] + " -> " + degrees[i] + "°C" + " -> " + rain[i] + "mm");
         }
+
+         */
     }
 }

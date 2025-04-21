@@ -1,22 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class MyFrame extends JFrame{
-    MyFrame() throws Exception {
-        // basic frame configuration
-        this.setTitle("WEATHER");
-        this.setSize(800, 600);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //EXIT OUT OF APPLICATION
-        //this.setResizable(false);
-        this.setLayout(null);
-        this.setPreferredSize(new Dimension(800, 500));
-        this.getContentPane().setBackground(Color.orange); //Changes background colour
+public class Subwindow extends JFrame {
+    JFrame subWindow = new JFrame();
+    public Subwindow(){
+        this.setSize(420,420);
+        this.setVisible(true);
 
-        Component component = new Component();
-        component.setBounds(0, 0, 800, 600);
-        this.add(component);
-        //lets the component class attributes be used in the frame
-        //has the this appear
         JTextArea textArea = new JTextArea();
 
         textArea.setEditable(false);
@@ -34,21 +24,10 @@ public class MyFrame extends JFrame{
         scrollPane.setBorder(null);
 
         this.add(scrollPane);
-        //this.setLayout(new BorderLayout());
-        //this.add(scrollPane, BorderLayout.CENTER);
 
-
-
-
-
-
-
-        OpenMeteoClient.updateCurrentWeather("Paris");
-        OpenMeteoClient.updateForecast("Paris");
         String[] times = OpenMeteoClient.getForecastTime();
         String[] degrees = OpenMeteoClient.getForecastTemperature();
         String[] rain = OpenMeteoClient.getForecastPrecipitation();
-
 
         StringBuilder forecastText = new StringBuilder();
         for (int i = 0; i < Math.min(times.length, degrees.length); i++) {
@@ -59,11 +38,8 @@ public class MyFrame extends JFrame{
                     .append(rain[i])
                     .append("mm\n");
         }
+        textArea.setText(forecastText.toString());
 
-        //textArea.setText(forecastText.toString());
-        this.pack();
-        this.setLocationRelativeTo(null); // optional: center on screen
-        this.setVisible(true);
+
     }
 }
-
