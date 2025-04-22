@@ -1,3 +1,5 @@
+package Exercise1;
+
 public abstract class Shape {
     private int shapeSize;
 

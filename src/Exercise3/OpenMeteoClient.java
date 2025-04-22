@@ -1,3 +1,4 @@
+package Exercise3;
 
 import java.net.URI;
 import java.net.http.HttpClient;

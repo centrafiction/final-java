@@ -1,4 +1,6 @@
-public class Square extends Shape{
+package Exercise1;
+
+public class Square extends Shape {
     public Square(int shapeSize){
         // CONSTRUCTOR!!!!!!!!!
         super(shapeSize);

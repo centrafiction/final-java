@@ -1,3 +1,5 @@
+package Exercise1;
+
 import java.util.Random;
 
 public class Exercise1 {
@@ -14,10 +16,10 @@ public class Exercise1 {
         //Randomly picks from the array whether it will be a square or triangle
             if (isSquare) {
                 shapes[i] = new Square(shapeSize);
-                System.out.println("Shape " + (i + 1) + ": Square (Size " + shapeSize + ")");
+                System.out.println("Exercise1.Shape " + (i + 1) + ": Exercise1.Square (Size " + shapeSize + ")");
             } else {
                 shapes[i] = new Triangle(shapeSize);
-                System.out.println("Shape " + (i + 1) + ": Triangle (Size " + shapeSize + ")");
+                System.out.println("Exercise1.Shape " + (i + 1) + ": Exercise1.Triangle (Size " + shapeSize + ")");
             }
             //draws shapes and a new line to separate
             shapes[i].draw();

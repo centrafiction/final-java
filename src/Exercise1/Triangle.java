@@ -1,4 +1,6 @@
-public class Triangle extends Shape{
+package Exercise1;
+
+public class Triangle extends Shape {
     public Triangle(int shapeSize){
         //CONSTRUCTOR >:(
         super(shapeSize);

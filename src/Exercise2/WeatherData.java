@@ -1,3 +1,5 @@
+package Exercise2;
+
 public class WeatherData {
     // THIS IS A DECLARATION IT DECLARES THAT IT EXISTS ESSENTIALLY
     private int year;
